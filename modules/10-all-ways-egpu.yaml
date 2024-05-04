@@ -4,5 +4,5 @@ commands:
   - chmod +x "/usr/bin/all-ways-egpu"
   - systemctl daemon-reload
   - systemctl enable all-ways-egpu-boot-vga.service
-	-	systemctl enable all-ways-egpu-shutdown.service
+  - systemctl enable all-ways-egpu-shutdown.service
   - systemctl enable all-ways-egpu-set-compositor.service
