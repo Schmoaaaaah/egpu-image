@@ -2,7 +2,7 @@
 
 VERSION=0.52.1
 BINDIR=/usr/bin
-USER_IDS_DIR=/usr/share/all-ways-egpu
+USER_IDS_DIR=/home/nkemp/.config/all-ways-egpu
 CONFDIR=/etc/all-ways-egpu
 ENV_PATH=/etc/environment.d
 # Note the following file locations are used by the script and may be overwritten if they already exist
