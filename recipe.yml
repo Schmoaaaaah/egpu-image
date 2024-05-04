@@ -1,11 +1,11 @@
-name: Custom Vanilla Desktop
-id: custom
+name: EGPU Vanilla Desktop
+id: egpu
 stages:
 - id: build
   base: ghcr.io/vanilla-os/desktop:main
   singlelayer: false
   labels:
-    maintainer: self-maintained
+    maintainer: Schmoaaaaah
   args:
     DEBIAN_FRONTEND: noninteractive
   runs:
@@ -20,21 +20,10 @@ stages:
 
   # Put your custom actions behind this comment
 
-  - name: example-packages
-    type: apt
-    source:
-      packages:
-      - vim
-
-  - name: example-commands
-    type: shell
-    commands:
-    - echo Example output
-
-  - name: example-modules
+  - name: all-ways-egpu
     type: includes
     includes:
-      - modules/50-install-debs.yml
+      - modules/10-all-ways-egpu.yaml
 
   # Put your custom actions before this comment
 
