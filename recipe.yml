@@ -2,7 +2,7 @@ name: EGPU Vanilla Desktop
 id: egpu
 stages:
 - id: build
-  base: ghcr.io/vanilla-os/desktop:main
+  base: ghcr.io/vanilla-os/nvidia:main
   singlelayer: false
   labels:
     maintainer: Schmoaaaaah
