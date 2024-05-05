@@ -25,6 +25,24 @@ stages:
     includes:
       - modules/10-all-ways-egpu.yaml
 
+  - name: additional-firmware
+    type: apt # or any other supported package manager
+    source:
+      packages:
+        - firmware-amd-graphics 
+        - libgl1-mesa-dri 
+        - libglx-mesa0 
+        - mesa-vulkan-drivers 
+        - xserver-xorg-video-all
+        - firmware-linux
+        - firmware-linux-nonfree
+        - firmware-misc-nonfree
+      options:
+        noRecommends: false
+        installSuggestions: false
+        fixMissing: false
+        fixBroken: false
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot
