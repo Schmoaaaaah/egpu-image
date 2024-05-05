@@ -12,7 +12,7 @@ env:
 
 jobs:
   check_update:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, X64]
     outputs:
       has_updates: ${{ steps.set_output.outputs.has_updates }}
       base_image: ${{ steps.read_base_recipe.outputs.base_image }}
@@ -83,7 +83,7 @@ jobs:
           fi
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, X64]
     needs: check_update
     if: ${{ needs.check_update.outputs.has_updates == 'true' }}
     permissions:
